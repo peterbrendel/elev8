@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 8.0.2'
 
+gem 'bcrypt', '~> 3.1.7'
+
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'
 
@@ -12,9 +14,7 @@ gem 'puma', '>= 5.0'
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem 'jbuilder'
 
-gem 'devise'
-
-gem 'devise-jwt'
+gem 'jwt', '~> 2.5'
 
 # gem 'rack-cors'
 
@@ -22,6 +22,7 @@ gem 'devise-jwt'
 # gem 'bcrypt', '~> 3.1.7'
 
 group :development, :test do
+  gem 'dotenv-rails', groups: [:development, :test]
   # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
   gem 'brakeman', require: false
 

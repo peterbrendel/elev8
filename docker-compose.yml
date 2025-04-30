@@ -9,12 +9,13 @@ services:
       # POSTGRES_USER: postgres
       # POSTGRES_PASSWORD: password
       POSTGRES_DB: elev8_development
+      POSTGRES_HOST_AUTH_METHOD: trust
     ports:
       - "5432:5432"
 
   web:
     build: .
-    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails server -b 0.0.0.0 -p 3000"
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rake db:migrate && bundle exec rails server -b 0.0.0.0 -p 3000"
     volumes:
       - .:/app
     ports:
@@ -24,6 +25,7 @@ services:
     environment:
       DATABASE_URL: postgres://postgres:password@db:5432/elev8_development
       RAILS_ENV: development
+      JWT_SECRET_KEY: 5b3be9227924cd531d75975df2cc2812dad141f686c5
 
 volumes:
   postgres_data:
