@@ -36,4 +36,26 @@ jobs:
 
       - name: Lint code for consistent style
         run: bin/rubocop -f github
+  # add a test job with a database
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
 
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: .ruby-version
+          bundler-cache: true
+
+      - name: Set up PostgreSQL
+        uses: harmon758/postgresql-action@v1
+        with:
+          postgresql version: '15'
+          postgresql dbname: 'elev8_test'
+          postgresql user: 'postgres'
+          postgresql password: 'password'
+
+      - name: Run tests
+        run: rspec --format documentation
