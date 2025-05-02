@@ -59,3 +59,9 @@ jobs:
 
       - name: Run tests
         run: bundle exec rspec --format documentation
+        env:
+          RAILS_ENV: test
+          JWT_SECRET_KEY: ${{ secrets.JWT_SECRET_KEY }}
+          DATABASE_URL: postgres://postgres:password@localhost/elev8_test
+          ELEVATEAPP_SERVICE_URL: http://localhost:2999
+          ELEVATEAPP_SERVICE_TOKEN: elevateapp_service_token
