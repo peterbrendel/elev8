@@ -19,8 +19,11 @@ gem 'jwt', '~> 2.5'
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 gem 'bcrypt', '~> 3.1.7'
 
+# Password validation [https://github.com/bdmac/strong_password]
+gem 'strong_password', '~> 0.0.9'
+
 group :development, :test do
-  gem 'dotenv-rails', groups: [:development, :test]
+  gem 'dotenv-rails'
   # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
   gem 'brakeman', require: false
 
@@ -30,4 +33,8 @@ group :development, :test do
 
   gem 'rspec-rails'
   gem 'factory_bot_rails'
+end
+
+group :test do
+  gem 'shoulda-matchers', require: false
 end
