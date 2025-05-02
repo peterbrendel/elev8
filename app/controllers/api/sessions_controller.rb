@@ -10,7 +10,7 @@ class Api::SessionsController < ApplicationController
 
     if user&.authenticate(permit_params[:password])
       token = encode({ user_id: user.id })
-      render json: { token: "Bearer #{token}" }, status: :created
+      render json: { token: }, status: :created
     else
       render json: { errors: ['Invalid email or password'] }, status: :unauthorized
     end

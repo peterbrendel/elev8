@@ -73,4 +73,9 @@ Rails.application.configure do
   # config.generators.apply_rubocop_autocorrect_after_generate!
 
   config.session_store :disabled # Disable session store in favor of JWT auth
+
+  config.after_initialize do
+    Bullet.enable = true
+    Bullet.rails_logger = true
+  end
 end

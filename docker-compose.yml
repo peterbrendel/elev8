@@ -30,10 +30,8 @@ services:
       - "3000:3000"
     depends_on:
       - db
-    environment:
-      DATABASE_URL: postgres://postgres:password@db:5432/elev8_development
-      RAILS_ENV: development
-      JWT_SECRET_KEY: 5b3be9227924cd531d75975df2cc2812dad141f686c5
+    env_file:
+      - .env.development
 
   test:
     build: .
@@ -43,10 +41,8 @@ services:
       - bundle_cache:/usr/local/bundle
     depends_on:
       - db
-    environment:
-      RAILS_ENV: test
-      DATABASE_URL: postgres://postgres:password@db:5432/elev8_test
-      JWT_SECRET_KEY: 4e17dde82b8e7f5e93de9af37e6821fb2004b8ded004
+    env_file:
+      - .env.test
 
 volumes:
   bundle_cache:

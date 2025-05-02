@@ -13,6 +13,23 @@ class Api::UsersController < ApplicationController
     end
   end
 
+  def show
+    # here we pay the database RTT to fetch the user
+    user = User.find(current_user_id)
+
+    # in a big project this would be a serializer to separate the concerns and DRY
+    render json: {
+      user: {
+        id: user.id,
+        email: user.email,
+        stats: {
+          total_games_played: user.completed_game_events.count
+        },
+        subscription_status: SubscriptionStatusService.fetch_status(user.id)
+      }
+    }, status: :ok
+  end
+
   def user_params
     params.permit(:email, :password)
   end

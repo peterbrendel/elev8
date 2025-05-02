@@ -7,5 +7,6 @@ class GameEvent < ApplicationRecord
   validates :occurred_at, presence: true
   validates :event_type, presence: true
   
-  enum :event_type, { "COMPLETED" => 0 }
+  EVENT_TYPES = { "COMPLETED" => 0 }.freeze
+  enum :event_type, EVENT_TYPES
 end

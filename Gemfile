@@ -33,8 +33,11 @@ group :development, :test do
 
   gem 'rspec-rails'
   gem 'factory_bot_rails'
+
+  gem 'bullet'
 end
 
 group :test do
   gem 'shoulda-matchers', require: false
+  gem 'webmock', require: false
 end
