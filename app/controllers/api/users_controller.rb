@@ -25,6 +25,8 @@ class Api::UsersController < ApplicationController
         stats: {
           total_games_played: user.completed_game_events.count
         },
+        # Note: the service recalculates the subscription status of users every 24h.
+        # this indicates that I could cache the response for 24h, but the cache invalidation timeframe isn't specified
         subscription_status: SubscriptionStatusService.fetch_status(user.id)
       }
     }, status: :ok
