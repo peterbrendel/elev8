@@ -8422,3 +8422,232 @@ Processing by Api::UsersController#create as HTML
   [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
 Completed 422 Unprocessable Content in 8ms (Views: 0.1ms | ActiveRecord: 1.0ms (2 queries, 0 cached) | GC: 0.6ms)
   [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2025-05-02 05:11:48.016150"], ["updated_at", "2025-05-02 05:11:48.016150"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2025-05-02 05:11:48.032296"], ["updated_at", "2025-05-02 05:11:48.032296"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2025-05-02 05:11:48.047348"], ["updated_at", "2025-05-02 05:11:48.047348"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2025-05-02 05:11:48.061477"], ["updated_at", "2025-05-02 05:11:48.061477"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2025-05-02 05:11:48.104638"], ["updated_at", "2025-05-02 05:11:48.104638"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started POST "/api/user/game_events" for 127.0.0.1 at 2025-05-02 05:11:48 +0000
+Processing by Api::GameEventsController#create as HTML
+  Parameters: {"game_event"=>{"game_name"=>"Test Game", "type"=>"COMPLETED", "occurred_at"=>"2025-05-02 05:11:48 UTC"}}
+Creating game event with params: {"game_event"=>{"game_name"=>"Test Game", "type"=>"COMPLETED", "occurred_at"=>"2025-05-02 05:11:48 UTC"}, "controller"=>"api/game_events", "action"=>"create"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 423], ["LIMIT", 1]]
+  [1m[36mGameEvent Create (0.5ms)[0m  [1m[32mINSERT INTO "game_events" ("game_name", "event_type", "occurred_at", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["game_name", "Test Game"], ["event_type", 0], ["occurred_at", "2025-05-02 05:11:48"], ["user_id", 423], ["created_at", "2025-05-02 05:11:48.135578"], ["updated_at", "2025-05-02 05:11:48.135578"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 9ms (Views: 0.1ms | ActiveRecord: 2.0ms (2 queries, 0 cached) | GC: 0.1ms)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2025-05-02 05:11:48.146631"], ["updated_at", "2025-05-02 05:11:48.146631"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started POST "/api/user/game_events" for 127.0.0.1 at 2025-05-02 05:11:48 +0000
+Processing by Api::GameEventsController#create as HTML
+  Parameters: {"game_event"=>{"game_name"=>"Test Game", "type"=>"COMPLETED", "occurred_at"=>"2025-05-02 05:11:48 UTC"}}
+Creating game event with params: {"game_event"=>{"game_name"=>"Test Game", "type"=>"COMPLETED", "occurred_at"=>"2025-05-02 05:11:48 UTC"}, "controller"=>"api/game_events", "action"=>"create"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 424], ["LIMIT", 1]]
+  [1m[36mGameEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "game_events" ("game_name", "event_type", "occurred_at", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["game_name", "Test Game"], ["event_type", 0], ["occurred_at", "2025-05-02 05:11:48"], ["user_id", 424], ["created_at", "2025-05-02 05:11:48.165334"], ["updated_at", "2025-05-02 05:11:48.165334"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 8ms (Views: 0.1ms | ActiveRecord: 1.6ms (2 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mGameEvent Load (0.4ms)[0m  [1m[34mSELECT "game_events".* FROM "game_events" ORDER BY "game_events"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2025-05-02 05:11:48.180654"], ["updated_at", "2025-05-02 05:11:48.180654"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started POST "/api/user/game_events" for 127.0.0.1 at 2025-05-02 05:11:48 +0000
+Processing by Api::GameEventsController#create as HTML
+  Parameters: {"game_event"=>{"game_name"=>"Test Game", "type"=>"INVALID_TYPE", "occurred_at"=>"2025-05-02 05:11:48 UTC"}}
+Creating game event with params: {"game_event"=>{"game_name"=>"Test Game", "type"=>"INVALID_TYPE", "occurred_at"=>"2025-05-02 05:11:48 UTC"}, "controller"=>"api/game_events", "action"=>"create"}
+Completed 422 Unprocessable Content in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2025-05-02 05:11:48.191840"], ["updated_at", "2025-05-02 05:11:48.191840"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started POST "/api/user/game_events" for 127.0.0.1 at 2025-05-02 05:11:48 +0000
+Processing by Api::GameEventsController#create as HTML
+  Parameters: {"game_event"=>{"type"=>"COMPLETED", "occurred_at"=>"2025-05-02 05:11:48 UTC"}}
+Creating game event with params: {"game_event"=>{"type"=>"COMPLETED", "occurred_at"=>"2025-05-02 05:11:48 UTC"}, "controller"=>"api/game_events", "action"=>"create"}
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 426], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Content in 6ms (Views: 0.1ms | ActiveRecord: 2.8ms (1 query, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2025-05-02 05:11:48.210345"], ["updated_at", "2025-05-02 05:11:48.210345"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started POST "/api/user/game_events" for 127.0.0.1 at 2025-05-02 05:11:48 +0000
+Processing by Api::GameEventsController#create as HTML
+  Parameters: {"game_event"=>{"game_name"=>"Test Game", "occurred_at"=>"2025-05-02 05:11:48 UTC"}}
+Creating game event with params: {"game_event"=>{"game_name"=>"Test Game", "occurred_at"=>"2025-05-02 05:11:48 UTC"}, "controller"=>"api/game_events", "action"=>"create"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 427], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Content in 4ms (Views: 0.1ms | ActiveRecord: 1.0ms (1 query, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2025-05-02 05:11:48.238674"], ["updated_at", "2025-05-02 05:11:48.238674"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started POST "/api/user/game_events" for 127.0.0.1 at 2025-05-02 05:11:48 +0000
+Processing by Api::GameEventsController#create as HTML
+  Parameters: {"game_event"=>{"game_name"=>"Test Game", "type"=>"COMPLETED"}}
+Creating game event with params: {"game_event"=>{"game_name"=>"Test Game", "type"=>"COMPLETED"}, "controller"=>"api/game_events", "action"=>"create"}
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 428], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Content in 6ms (Views: 0.1ms | ActiveRecord: 1.6ms (1 query, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2025-05-02 05:11:48.260603"], ["updated_at", "2025-05-02 05:11:48.260603"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started POST "/api/user/game_events" for 127.0.0.1 at 2025-05-02 05:11:48 +0000
+Processing by Api::GameEventsController#create as HTML
+  Parameters: {"game_event"=>{"game_name"=>"Test Game", "type"=>"COMPLETED", "occurred_at"=>"invalid_datetime"}}
+Creating game event with params: {"game_event"=>{"game_name"=>"Test Game", "type"=>"COMPLETED", "occurred_at"=>"invalid_datetime"}, "controller"=>"api/game_events", "action"=>"create"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 429], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Content in 7ms (Views: 0.1ms | ActiveRecord: 1.0ms (1 query, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+Started POST "/api/user/game_events" for 127.0.0.1 at 2025-05-02 05:11:48 +0000
+Processing by Api::GameEventsController#create as HTML
+  Parameters: {"game_event"=>{"game_name"=>"Test Game", "type"=>"COMPLETED", "occurred_at"=>"2025-05-02 05:11:48 UTC"}}
+Filter chain halted as :authenticate_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2025-05-02 05:11:48.283439"], ["updated_at", "2025-05-02 05:11:48.283439"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started POST "/api/sessions" for 127.0.0.1 at 2025-05-02 05:11:48 +0000
+Processing by Api::SessionsController#create as HTML
+  Parameters: {"email"=>"[FILTERED]", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+Completed 201 Created in 4ms (Views: 0.1ms | ActiveRecord: 1.2ms (1 query, 0 cached) | GC: 0.1ms)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2025-05-02 05:11:48.298916"], ["updated_at", "2025-05-02 05:11:48.298916"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started POST "/api/sessions" for 127.0.0.1 at 2025-05-02 05:11:48 +0000
+Processing by Api::SessionsController#create as HTML
+  Parameters: {"email"=>"[FILTERED]", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/api/user" for 127.0.0.1 at 2025-05-02 05:11:48 +0000
+Processing by Api::UsersController#create as HTML
+  Parameters: {"email"=>"[FILTERED]", "password"=>"[FILTERED]"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2025-05-02 05:11:48.320657"], ["updated_at", "2025-05-02 05:11:48.320657"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "[FILTERED]"], ["id", 432], ["LIMIT", 1]]
+Completed 201 Created in 28ms (Views: 0.1ms | ActiveRecord: 2.9ms (3 queries, 0 cached) | GC: 13.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/api/user" for 127.0.0.1 at 2025-05-02 05:11:48 +0000
+Processing by Api::UsersController#create as HTML
+  Parameters: {"password"=>"[FILTERED]"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 422 Unprocessable Content in 29ms (Views: 0.1ms | ActiveRecord: 1.5ms (2 queries, 0 cached) | GC: 18.0ms)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/api/user" for 127.0.0.1 at 2025-05-02 05:11:48 +0000
+Processing by Api::UsersController#create as HTML
+  Parameters: {"email"=>"[FILTERED]"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+Completed 422 Unprocessable Content in 4ms (Views: 0.1ms | ActiveRecord: 1.0ms (2 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/api/user" for 127.0.0.1 at 2025-05-02 05:11:48 +0000
+Processing by Api::UsersController#create as HTML
+  Parameters: {"email"=>"[FILTERED]", "password"=>"[FILTERED]"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+Completed 422 Unprocessable Content in 8ms (Views: 0.1ms | ActiveRecord: 1.2ms (2 queries, 0 cached) | GC: 0.4ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/api/user" for 127.0.0.1 at 2025-05-02 05:11:48 +0000
+Processing by Api::UsersController#create as HTML
+  Parameters: {"email"=>"[FILTERED]", "password"=>"[FILTERED]"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+Completed 422 Unprocessable Content in 8ms (Views: 0.1ms | ActiveRecord: 1.2ms (2 queries, 0 cached) | GC: 0.4ms)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m

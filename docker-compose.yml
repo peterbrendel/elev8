@@ -6,8 +6,8 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
     environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: password
+      # POSTGRES_USER: postgres
+      # POSTGRES_PASSWORD: password
       POSTGRES_DB: elev8_development
       POSTGRES_HOST_AUTH_METHOD: trust
     ports:
