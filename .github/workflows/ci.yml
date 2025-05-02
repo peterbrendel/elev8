@@ -58,4 +58,4 @@ jobs:
           postgresql password: 'password'
 
       - name: Run tests
-        run: rspec --format documentation
+        run: bundle exec rspec --format documentation
