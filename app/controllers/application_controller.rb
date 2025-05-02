@@ -6,13 +6,13 @@ class ApplicationController < ActionController::API
   attr_reader :current_user_id
 
   before_action :authenticate_request
-  
+
   def authenticate_request
-    token = request.headers['Authorization']&.split(' ')&.last
+    token = request.headers["Authorization"]&.split(" ")&.last
 
     # avoid paying a Database RTT for every authenticated request
-    @current_user_id = decode(token)&.dig('user_id') if token.present?
+    @current_user_id = decode(token)&.dig("user_id") if token.present?
 
-    render json: { errors: ['Not Authorized'] }, status: :unauthorized unless @current_user_id
+    render json: { errors: [ "Not Authorized" ] }, status: :unauthorized unless @current_user_id
   end
 end

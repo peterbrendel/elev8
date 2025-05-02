@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require 'net/http'
-require 'uri'
-require 'json'
+require "net/http"
+require "uri"
+require "json"
 
 class SubscriptionStatusService
   # if the API was more complex this would inherit an integration service
@@ -12,13 +12,13 @@ class SubscriptionStatusService
   # be able to stub the requests and responses for testing
   # but for the sake of the assignment, let's keep it simple
 
-  BASE_URL = ENV.fetch('ELEVATEAPP_SERVICE_URL')
+  BASE_URL = ENV.fetch("ELEVATEAPP_SERVICE_URL")
   ENDPOINT_URL = "#{BASE_URL}/api/v1/users/:user_id/billing"
-  TOKEN = ENV.fetch('ELEVATEAPP_SERVICE_TOKEN')
+  TOKEN = ENV.fetch("ELEVATEAPP_SERVICE_TOKEN")
 
   def self.fetch_status(user_id)
-    uri = URI.parse(ENDPOINT_URL.gsub(':user_id', user_id.to_s))
-    response = Net::HTTP.get_response(uri, { 'Authorization' => "Bearer #{TOKEN}" })
+    uri = URI.parse(ENDPOINT_URL.gsub(":user_id", user_id.to_s))
+    response = Net::HTTP.get_response(uri, { "Authorization" => "Bearer #{TOKEN}" })
 
     if response.is_a?(Net::HTTPSuccess)
       parse_response(response.body)
@@ -30,14 +30,14 @@ class SubscriptionStatusService
   private
 
   RESPONSE_MAPPINGS = {
-    'active' => 'active',
-    'expired' => 'expired'
+    "active" => "active",
+    "expired" => "expired"
   }
 
   def self.parse_response(body)
     data = JSON.parse(body)
 
-    RESPONSE_MAPPINGS[data['subscription_status']]
+    RESPONSE_MAPPINGS[data["subscription_status"]]
   rescue JSON::ParserError
     nil
   end

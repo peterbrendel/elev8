@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Api::UsersController < ApplicationController
-  skip_before_action :authenticate_request, only: [:create]
+  skip_before_action :authenticate_request, only: [ :create ]
 
   def create
     user = User.create(user_params)

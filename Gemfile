@@ -1,43 +1,43 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
-gem 'rails', '~> 8.0.2'
+gem "rails", "~> 8.0.2"
 
 # Use postgresql as the database for Active Record
-gem 'pg', '~> 1.1'
+gem "pg", "~> 1.1"
 
 # Use the Puma web server [https://github.com/puma/puma]
-gem 'puma', '>= 5.0'
+gem "puma", ">= 5.0"
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
-gem 'jbuilder'
+gem "jbuilder"
 
-gem 'jwt', '~> 2.5'
+gem "jwt", "~> 2.5"
 
 # gem 'rack-cors'
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
-gem 'bcrypt', '~> 3.1.7'
+gem "bcrypt", "~> 3.1.7"
 
 # Password validation [https://github.com/bdmac/strong_password]
-gem 'strong_password', '~> 0.0.9'
+gem "strong_password", "~> 0.0.9"
 
 group :development, :test do
-  gem 'dotenv-rails'
+  gem "dotenv-rails"
   # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
-  gem 'brakeman', require: false
+  gem "brakeman", require: false
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
-  gem 'rubocop'
-  gem 'rubocop-rails-omakase', require: false
+  gem "rubocop"
+  gem "rubocop-rails-omakase", require: false
 
-  gem 'rspec-rails'
-  gem 'factory_bot_rails'
+  gem "rspec-rails"
+  gem "factory_bot_rails"
 
-  gem 'bullet'
+  gem "bullet"
 end
 
 group :test do
-  gem 'shoulda-matchers', require: false
-  gem 'webmock', require: false
+  gem "shoulda-matchers", require: false
+  gem "webmock", require: false
 end

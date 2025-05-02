@@ -3,7 +3,7 @@
 module JsonWebToken
   extend ActiveSupport::Concern
 
-  SECRET_KEY = ENV.fetch('JWT_SECRET_KEY')
+  SECRET_KEY = ENV.fetch("JWT_SECRET_KEY")
 
   def encode(payload, exp = 24.hours.from_now)
     payload[:exp] = exp.to_i

@@ -12,6 +12,6 @@ RSpec.describe GameEvent, type: :model do
   end
 
   describe "enum" do
-    it { should define_enum_for(:event_type).with_values(["COMPLETED"]) }
+    it { should define_enum_for(:event_type).with_values([ "COMPLETED" ]) }
   end
 end

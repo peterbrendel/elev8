@@ -5,7 +5,7 @@ class Api::GameEventsController < ApplicationController
     # Considering there would be more work to do, we would probably use a service to handle the controller process
     # we could benefit from a GameEventService, it would enable us to reuse the logic in other controllers or jobs
     # and also to test it in isolation.
-    
+
     # this logic specifically could be handled by a job, thinking of UX, it doesn't really matter to the user
     # as long as the event is created we should free the user from waiting for the response
     # but for the sake of the assignment, let's keep it simple (and also not prematurely optimize)
@@ -27,7 +27,7 @@ class Api::GameEventsController < ApplicationController
     # apparently enum throws ArgumentError when object is created instead of when it is saved
     # this probably shouldnt be a definitive solution, but it's fine for this assignment
   rescue ArgumentError => e
-    if e.message.include?('event_type')
+    if e.message.include?("event_type")
       render json: { errors: e.message }, status: :unprocessable_entity
     else
       raise e

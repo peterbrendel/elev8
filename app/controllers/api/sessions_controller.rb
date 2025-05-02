@@ -3,7 +3,7 @@
 class Api::SessionsController < ApplicationController
   include JsonWebToken
 
-  skip_before_action :authenticate_request, only: [:create]
+  skip_before_action :authenticate_request, only: [ :create ]
 
   def create
     user = User.find_by(email: permit_params[:email])
@@ -12,7 +12,7 @@ class Api::SessionsController < ApplicationController
       token = encode({ user_id: user.id })
       render json: { token: }, status: :created
     else
-      render json: { errors: ['Invalid email or password'] }, status: :unauthorized
+      render json: { errors: [ "Invalid email or password" ] }, status: :unauthorized
     end
   end
 
