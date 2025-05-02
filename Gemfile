@@ -3,8 +3,6 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 8.0.2'
 
-gem 'bcrypt', '~> 3.1.7'
-
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'
 
@@ -19,7 +17,7 @@ gem 'jwt', '~> 2.5'
 # gem 'rack-cors'
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 group :development, :test do
   gem 'dotenv-rails', groups: [:development, :test]
@@ -31,4 +29,5 @@ group :development, :test do
   gem 'rubocop-rails-omakase', require: false
 
   gem 'rspec-rails'
+  gem 'factory_bot_rails'
 end
