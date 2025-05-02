@@ -58,7 +58,7 @@ jobs:
           postgresql password: 'password'
 
       - name: Run tests
-        run: bundle exec rspec --format documentation
+        run: bundle exec rails db:prepare && bundle exec rspec --format documentation
         env:
           RAILS_ENV: test
           JWT_SECRET_KEY: ${{ secrets.JWT_SECRET_KEY }}
